@@ -23,35 +23,50 @@ namespace CyberAwarenessBot
         }
         public static void DisplayLogo()
         {
-            // Here is the chatbots visual ASCII representation and logo and displays in the header when the chatbot launches.
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Cyan;
 
-            // Each string here is exactly the same length to keep the borders straight
+            // The logo is exactly 60 characters wide
+            int logoWidth = 60;
+            int consoleWidth = Console.WindowWidth;
+
+            // Calculate how many spaces we need on the left to center it
+            // If the console is smaller than the logo, we default to 0 to avoid errors
+            int leftPadding = Math.Max(0, (consoleWidth - logoWidth) / 2);
+            string padding = new string(' ', leftPadding);
+
             string[] logoLines = {
         "============================================================",
-        "  ______ _    _  _   _____  _____  _____  ___   _   _  _____ ",
+        "  ______ _    _  _    _____  _____  _____  ___   _   _  _____ ",
         " |  ____| |  | || | |  __ \\|  __ \\|_   _|/ _ \\ | \\ | |/ ____|",
         " | |  __| |  | || | | |__) | |  | | | | / /_\\ \\|  \\| | (___  ",
         " | | |_ | |  | || | |  _  /| |  | | | | |  _  || . ` |\\___ \\ ",
         " | |__| | |__| || | | | \\ \\| |__| |_| |_| | | || |\\  |____) |",
         "  \\______|______| |_|_|  \\_\\_____/|_____|_| |_||_| \\_|_____/ ",
         "                                                              ",
-        "             --- GUARDIANS OF YOUR INTEGRITY ---             ",
+        "               --- GUARDIANS OF YOUR INTEGRITY ---             ",
         "============================================================"
     };
 
             foreach (string line in logoLines)
             {
-                Console.WriteLine(line);
-                System.Threading.Thread.Sleep(80); // Slightly faster animation
+                // Add the padding to the start of every line
+                Console.WriteLine(padding + line);
+                System.Threading.Thread.Sleep(80);
             }
-            // Visual structure of the interface to enhaance the chatbots appearance with color text, spacing and borders.
+
+            // Visual structure of the interface to enhance the chatbots appearance
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.White;
-            // Padded with spaces to center it under the logo
-            Console.WriteLine("          SA's Leading Cyber Awareness Assistant            ");
-            Console.WriteLine("============================================================\n");
+
+            
+            string subHeading1 = "          SA's Leading Cyber Awareness Assistant            ";
+            Console.WriteLine(padding + subHeading1);
+
+            // This line now dynamically stretches to the full width of the window
+            string fullWidthLine = new string('=', Console.WindowWidth);
+            Console.WriteLine(fullWidthLine + "\n");
+
             Console.ResetColor();
         }
         // Displays the typing effect for a conversational feel.
