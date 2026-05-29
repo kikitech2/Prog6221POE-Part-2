@@ -40,7 +40,7 @@ namespace CyberAwarenessBotGUI1
             // without risking full process termination if hardware paths or sound resources fail.
             try
             {
-                // Cross-project assembly reference invocation to execute audio wav playback
+                // Voice implementation in the GUI application.
                 CyberAwarenessBot.UIHelper.PlayGreetingAudio();
             }
             catch (Exception ex)
