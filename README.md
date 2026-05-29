@@ -57,7 +57,7 @@ For Part 2 I developed a Graphical User Interface (GUI) that handles the dynamic
   
 ## Youtube link
 YOUTUBE LINK : https://youtu.be/gvz8vB6jWzQ
-
+YOUTUBE LINK PART 2: https://youtu.be/emr358NgIAg
 ## References
 Troelsen, A. and Japikse, P. (2021). Pro C# 9 with .NET 5: Foundational Principles and Practices in Programming. 10th edn. New York: Apress.
 .
