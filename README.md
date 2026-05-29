@@ -39,14 +39,15 @@ For Part 2 I developed a Graphical User Interface (GUI) that handles the dynamic
   ## Setup & Usage Instructions
 1. Open the 'Prog Poe Part 1.sln' file in the Visual Studio.
 2. Press ##F5## or click ##Start## to run the application.
-3. Click the green start button and the user is welcomed by an audio track that is played immmediately.
-4. The terminal screen should display a perfectly aligned GUARDIANS ASCII banner. Below the the header it will display the subtitle of the greeting that matches the recording. Exactly- Bot: Hello! I am your Cybersecurity Awareness Assistant, What is your name? And underneath it will show the system memory register that proves the first phase that has been excuted successfully.
-5. The user can test cybersecurity topics like phishing and the bot should display a warning message or if the user chooses ransomeware the bot gives a critical alert and if the user chooses the 2FA/MFA the bot gives educational advice.
-6. They system has the sentiment analyser that gets shown underneath the bots responses.
-7. Finally once the user chooses to clear it will remove all conversation hisory and if the user wishes to exit , the program ends.
-8. Each Part has been pushed to GitHub with the link submitted on Arc.
-9. Continuous Integration (CI) implemented through GitHub Actions and Workflow i have provided a screenshot.
-10. I produced a video presentation of my code for Part 2 demonstrating a full explanation of my code running and provided an unlisted Youtube video with my personalized voice.
+3. The greeting.wav is in the prog part 1 folder.
+4. Click the green start button and the user is welcomed by an audio track that is played immmediately.
+5. The terminal screen should display a perfectly aligned GUARDIANS ASCII banner. Below the the header it will display the subtitle of the greeting that matches the recording. Exactly- Bot: Hello! I am your Cybersecurity Awareness Assistant, What is your name? And underneath it will show the system memory register that proves the first phase that has been excuted successfully.
+6. The user can test cybersecurity topics like phishing and the bot should display a warning message or if the user chooses ransomeware the bot gives a critical alert and if the user chooses the 2FA/MFA the bot gives educational advice.
+7. They system has the sentiment analyser that gets shown underneath the bots responses.
+8. Finally once the user chooses to clear it will remove all conversation hisory and if the user wishes to exit , the program ends.
+9. Each Part has been pushed to GitHub with the link submitted on Arc.
+10. Continuous Integration (CI) implemented through GitHub Actions and Workflow i have provided a screenshot.
+11. I produced a video presentation of my code for Part 2 demonstrating a full explanation of my code running and provided an unlisted Youtube video with my personalized voice.
 
 ## ASCII Art Image
 
