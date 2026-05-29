@@ -48,6 +48,8 @@ For Part 2 I developed a Graphical User Interface (GUI) that handles the dynamic
 9. Continuous Integration (CI) implemented through GitHub Actions and Workflow i have provided a screenshot.
 10. I produced a video presentation of my code for Part 2 demonstrating a full explanation of my code running and provided an unlisted Youtube video with my personalized voice.
 
+## ASCII Art Image
+
   
 ## Youtube link
 YOUTUBE LINK : https://youtu.be/gvz8vB6jWzQ
