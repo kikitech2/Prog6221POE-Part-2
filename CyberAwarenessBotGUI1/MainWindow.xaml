@@ -1,0 +1,89 @@
+﻿<Window x:Class="CyberAwarenessBotGUI1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CyberAwarenessBotGUI1"
+        mc:Ignorable="d"
+        Title="CyberAwareness Assistant" Height="650" Width="900"
+        Background="#121212" WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <TextBlock Text="================================================================" 
+                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
+            <TextBlock Text="   _____ _    _   _    _____  _____  _____  ___   _   _  _____  " 
+                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
+            <TextBlock Text="  / ____| |  | | / \  |  __ \|  __ \|_   _|/ _ \ | \ | |/ ____| " 
+                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
+            <TextBlock Text=" | |  __| |  | |/ _ \ | |__) | |  | | | | / /_\ \|  \| | (___   " 
+                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
+            <TextBlock Text=" | | |_ | |  | / ___ \|  _  /| |  | | | | |  _  || . ` |\___ \  " 
+                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
+            <TextBlock Text=" | |__| | |__|/_/   \_\ | \ \| |__| |_| |_| | | || |\  |____) | " 
+                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
+            <TextBlock Text="  \_____ \___/ /     \_\|  \_\_____/|_____|_| |_||_| \_|_____/  " 
+                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
+            <TextBlock Text="                                                                " 
+                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
+            <TextBlock Text="                 --- GUARDIANS OF YOUR INTEGRITY ---            " 
+                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBlock Text="================================================================" 
+                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Hello, I am your Cyber Security Awareness Assistant. What is your name?" 
+                       Foreground="#FFFFFF" FontFamily="Consolas" FontSize="14" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <Separator Background="#333333" Margin="0,10,0,0"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" x:Name="ChatScrollViewer" VerticalScrollBarVisibility="Auto" Margin="0,5,0,10">
+            <TextBox x:Name="txtChatLog" 
+                     Background="#1E1E1E" 
+                     Foreground="#FFFFFF" 
+                     FontFamily="Consolas" 
+                     FontSize="13" 
+                     IsReadOnly="True" 
+                     TextWrapping="Wrap" 
+                     AcceptsReturn="True" 
+                     Padding="10"
+                     BorderBrush="#333333"
+                     BorderThickness="1"/>
+        </ScrollViewer>
+
+        <Grid Grid.Row="2" Margin="0,5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox x:Name="txtUserInput" 
+                     Grid.Column="0" 
+                     Background="#1E1E1E" 
+                     Foreground="#FFFFFF" 
+                     FontFamily="Consolas" 
+                     FontSize="14" 
+                     Padding="8" 
+                     BorderBrush="#00FFFF" 
+                     BorderThickness="1"
+                     VerticalContentAlignment="Center"
+                     KeyDown="TxtUserInput_KeyDown"/>
+
+            <Button x:Name="btnSend" 
+                    Grid.Column="1" 
+                    Content="SEND" 
+                    Background="#00FFFF" 
+                    Foreground="#121212" 
+                    FontFamily="Consolas" 
+                    FontSize="14" 
+                    FontWeight="Bold" 
+                    Margin="10,0,0,0"
+                    Click="BtnSend_Click"/>
+        </Grid>
+    </Grid>
+</Window>
