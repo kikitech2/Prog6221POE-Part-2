@@ -5,85 +5,144 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CyberAwarenessBotGUI1"
         mc:Ignorable="d"
-        Title="CyberAwareness Assistant" Height="650" Width="900"
+        Title="CyberAwareness Assistant" Height="750" Width="1200"
         Background="#121212" WindowStartupLocation="CenterScreen">
 
     <Grid Margin="15">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.2*" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="0" Margin="0,0,0,10">
-            <TextBlock Text="================================================================" 
-                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
-            <TextBlock Text="   _____ _    _   _    _____  _____  _____  ___   _   _  _____  " 
-                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
-            <TextBlock Text="  / ____| |  | | / \  |  __ \|  __ \|_   _|/ _ \ | \ | |/ ____| " 
-                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
-            <TextBlock Text=" | |  __| |  | |/ _ \ | |__) | |  | | | | / /_\ \|  \| | (___   " 
-                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
-            <TextBlock Text=" | | |_ | |  | / ___ \|  _  /| |  | | | | |  _  || . ` |\___ \  " 
-                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
-            <TextBlock Text=" | |__| | |__|/_/   \_\ | \ \| |__| |_| |_| | | || |\  |____) | " 
-                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
-            <TextBlock Text="  \_____ \___/ /     \_\|  \_\_____/|_____|_| |_||_| \_|_____/  " 
-                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
-            <TextBlock Text="                                                                " 
-                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
-            <TextBlock Text="                 --- GUARDIANS OF YOUR INTEGRITY ---            " 
-                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center" FontWeight="Bold"/>
-            <TextBlock Text="================================================================" 
-                       Foreground="#00FFFF" FontFamily="Consolas" FontSize="12" HorizontalAlignment="Center"/>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-            <TextBlock Text="Hello, I am your Cyber Security Awareness Assistant. What is your name?" 
-                       Foreground="#FFFFFF" FontFamily="Consolas" FontSize="14" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-            <Separator Background="#333333" Margin="0,10,0,0"/>
-        </StackPanel>
+            <StackPanel Grid.Row="0" Margin="0,0,0,10">
+                <TextBlock Text="================================================================" Foreground="#00FFFF" FontFamily="Consolas" FontSize="11" HorizontalAlignment="Center"/>
+                <TextBlock Text="   _____ _    _    _     _____  _____  _____  ___   _   _  _____  " Foreground="#00FFFF" FontFamily="Consolas" FontSize="11" HorizontalAlignment="Center"/>
+                <TextBlock Text="  / ____| |  | |  / \   |  __ \|  __ \|_   _|/ _ \ | \ | |/ ____| " Foreground="#00FFFF" FontFamily="Consolas" FontSize="11" HorizontalAlignment="Center"/>
+                <TextBlock Text=" | |  __| |  | | / _ \  | |__) | |  | | | | / /_\ \|  \| | (___   " Foreground="#00FFFF" FontFamily="Consolas" FontSize="11" HorizontalAlignment="Center"/>
+                <TextBlock Text=" | | |_ | |  | |/ ___ \ |  _  /| |  | | | | |  _  || . ` |\___ \  " Foreground="#00FFFF" FontFamily="Consolas" FontSize="11" HorizontalAlignment="Center"/>
+                <TextBlock Text=" | |__| | |__|/_/   \_\ | \ \| |__| |_| |_| | | || |\  |____) | " Foreground="#00FFFF" FontFamily="Consolas" FontSize="11" HorizontalAlignment="Center"/>
+                <TextBlock Text="  \_____ \___/ /     \_\|  \_\_____/|_____|_| |_||_| \_|_____/  " Foreground="#00FFFF" FontFamily="Consolas" FontSize="11" HorizontalAlignment="Center"/>
+                <TextBlock Text="                                                                " Foreground="#00FFFF" FontFamily="Consolas" FontSize="11" HorizontalAlignment="Center"/>
+                <TextBlock Text="                 --- GUARDIANS OF YOUR INTEGRITY ---            " Foreground="#00FFFF" FontFamily="Consolas" FontSize="11" HorizontalAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="================================================================" Foreground="#00FFFF" FontFamily="Consolas" FontSize="11" HorizontalAlignment="Center"/>
+                <Separator Background="#333333" Margin="0,10,0,0"/>
+            </StackPanel>
 
-        <ScrollViewer Grid.Row="1" x:Name="ChatScrollViewer" VerticalScrollBarVisibility="Auto" Margin="0,5,0,10">
-            <TextBox x:Name="txtChatLog" 
-                     Background="#1E1E1E" 
-                     Foreground="#FFFFFF" 
-                     FontFamily="Consolas" 
-                     FontSize="13" 
-                     IsReadOnly="True" 
-                     TextWrapping="Wrap" 
-                     AcceptsReturn="True" 
-                     Padding="10"
-                     BorderBrush="#333333"
-                     BorderThickness="1"/>
-        </ScrollViewer>
+            <ScrollViewer Grid.Row="1" x:Name="ChatScrollViewer" VerticalScrollBarVisibility="Auto" Margin="0,5,0,10">
+                <TextBox x:Name="txtChatLog" Background="#1E1E1E" Foreground="#FFFFFF" FontFamily="Consolas" FontSize="13" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" Padding="10" BorderBrush="#333333" BorderThickness="1"/>
+            </ScrollViewer>
 
-        <Grid Grid.Row="2" Margin="0,5,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="2" Margin="0,5,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
 
-            <TextBox x:Name="txtUserInput" 
-                     Grid.Column="0" 
-                     Background="#1E1E1E" 
-                     Foreground="#FFFFFF" 
-                     FontFamily="Consolas" 
-                     FontSize="14" 
-                     Padding="8" 
-                     BorderBrush="#00FFFF" 
-                     BorderThickness="1"
-                     VerticalContentAlignment="Center"
-                     KeyDown="TxtUserInput_KeyDown"/>
-
-            <Button x:Name="btnSend" 
-                    Grid.Column="1" 
-                    Content="SEND" 
-                    Background="#00FFFF" 
-                    Foreground="#121212" 
-                    FontFamily="Consolas" 
-                    FontSize="14" 
-                    FontWeight="Bold" 
-                    Margin="10,0,0,0"
-                    Click="BtnSend_Click"/>
+                <TextBox x:Name="txtUserInput" Grid.Column="0" Background="#1E1E1E" Foreground="#FFFFFF" FontFamily="Consolas" FontSize="14" Padding="8" BorderBrush="#00FFFF" BorderThickness="1" VerticalContentAlignment="Center" KeyDown="TxtUserInput_KeyDown"/>
+                <Button x:Name="btnSend" Grid.Column="1" Content="SEND" Background="#00FFFF" Foreground="#121212" FontFamily="Consolas" FontSize="14" FontWeight="Bold" Margin="10,0,0,0" Click="BtnSend_Click"/>
+            </Grid>
         </Grid>
+
+        <Border Grid.Column="2" Background="#1E1E1E" CornerRadius="5" BorderBrush="#333333" BorderThickness="1" Padding="15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Vertical">
+                    <TextBlock Text="🛡️ DATABASE TASK TRACKER" FontSize="18" FontWeight="Bold" Foreground="#00FFFF" Margin="0,0,0,2" FontFamily="Consolas"/>
+                    <TextBlock Text="Live SQL Server Monitoring Dashboard" FontSize="12" Foreground="#888888" Margin="0,0,0,10" FontFamily="Consolas"/>
+
+                    <UniformGrid Columns="3" Margin="0,0,0,12">
+                        <Border Background="#252526" BorderBrush="#333333" BorderThickness="1" CornerRadius="4" Padding="8" Margin="0,0,5,0">
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBlock Text="TOTAL" Foreground="#888888" FontSize="10" HorizontalAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                <TextBlock x:Name="lblTotalCount" Text="0" Foreground="#00FFFF" FontSize="18" HorizontalAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Background="#252526" BorderBrush="#333333" BorderThickness="1" CornerRadius="4" Padding="8" Margin="2,0,2,0">
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBlock Text="PENDING" Foreground="#888888" FontSize="10" HorizontalAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                <TextBlock x:Name="lblPendingCount" Text="0" Foreground="#FFA500" FontSize="18" HorizontalAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Background="#252526" BorderBrush="#333333" BorderThickness="1" CornerRadius="4" Padding="8" Margin="5,0,0,0">
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBlock Text="COMPLETED" Foreground="#888888" FontSize="10" HorizontalAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                                <TextBlock x:Name="lblCompletedCount" Text="0" Foreground="#00FF00" FontSize="18" HorizontalAlignment="Center" FontFamily="Consolas" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Border>
+                    </UniformGrid>
+
+                    <Border Background="#252526" BorderBrush="#333333" BorderThickness="1" CornerRadius="4" Padding="12" Margin="0,0,0,15">
+                        <StackPanel>
+                            <TextBlock Text="➕ CREATE NEW SECURITY TRACKING TASK" Foreground="#00FFFF" FontWeight="Bold" FontSize="12" FontFamily="Consolas" Margin="0,0,0,10"/>
+
+                            <TextBlock Text="Security Task Title:" Foreground="#FFFFFF" FontSize="11" FontFamily="Consolas" Margin="0,0,0,3"/>
+                            <TextBox x:Name="txtFormTitle" Background="#1E1E1E" Foreground="#FFFFFF" BorderBrush="#555555" BorderThickness="1" Padding="5" FontFamily="Consolas" FontSize="12" Margin="0,0,0,8"/>
+
+                            <TextBlock Text="Description / Mitigation Strategy:" Foreground="#FFFFFF" FontSize="11" FontFamily="Consolas" Margin="0,0,0,3"/>
+                            <TextBox x:Name="txtFormDescription" Background="#1E1E1E" Foreground="#FFFFFF" BorderBrush="#555555" BorderThickness="1" Padding="5" FontFamily="Consolas" FontSize="12" Margin="0,0,0,8" TextWrapping="Wrap" Height="45" AcceptsReturn="True"/>
+
+                            <TextBlock Text="Reminder Interval window (Days):" Foreground="#FFFFFF" FontSize="11" FontFamily="Consolas" Margin="0,0,0,3"/>
+                            <DockPanel Margin="0,0,0,12">
+                                <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center" Margin="15,0,0,0" Width="50">
+                                    <TextBlock Text="{Binding ElementName=sliderDays, Path=Value}" TextAlignment="Center" Foreground="#00FFFF" FontWeight="Bold" FontSize="16" FontFamily="Consolas"/>
+                                    <TextBlock Text="Days" TextAlignment="Center" Foreground="#888888" FontSize="9" FontFamily="Consolas"/>
+                                </StackPanel>
+                                <Slider x:Name="sliderDays" Minimum="0" Maximum="30" IsSnapToTickEnabled="True" TickFrequency="1" Value="7" Foreground="#00FFFF" VerticalAlignment="Center"/>
+                            </DockPanel>
+
+                            <Button x:Name="btnFormAdd" Content="ADD NEW TASK TO DATABASE" Background="#00FFFF" Foreground="#121212" FontWeight="Bold" FontFamily="Consolas" FontSize="12" Padding="8" Click="BtnFormAdd_Click"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <DataGrid x:Name="dgTasks" Grid.Row="1" Background="Transparent" RowBackground="#252526" AlternatingRowBackground="#2D2D30" 
+                          Foreground="White" BorderThickness="0" AutoGenerateColumns="False" CanUserAddRows="False" HeadersVisibility="Column"
+                          GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="#333333" RowHeight="38" FontFamily="Consolas" FontSize="12">
+
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="#1A1A1A"/>
+                            <Setter Property="Foreground" Value="#00FFFF"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Padding" Value="5,8,5,8"/>
+                            <Setter Property="BorderBrush" Value="#333333"/>
+                            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Security Task Title" Binding="{Binding Title}" Width="1.2*" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Days" Binding="{Binding ReminderDays}" Width="50" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Completed" Binding="{Binding IsCompleted}" Width="85" IsReadOnly="True"/>
+
+                        <DataGridTemplateColumn Header="Actions" Width="85">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Content="✓" Background="#00FF00" Foreground="Black" Width="26" Height="24" Margin="2" Padding="0" FontWeight="Bold" ToolTip="Mark Task Complete" Click="BtnVisualComplete_Click" Tag="{Binding Id}"/>
+                                        <Button Content="✕" Background="#FF3333" Foreground="White" Width="26" Height="24" Margin="2" Padding="0" FontWeight="Bold" ToolTip="Delete Task" Click="BtnVisualDelete_Click" Tag="{Binding Id}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

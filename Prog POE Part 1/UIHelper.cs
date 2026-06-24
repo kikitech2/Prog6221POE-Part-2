@@ -80,6 +80,11 @@ namespace CyberAwarenessBot
             Console.WriteLine();
 
         }
+
+        public static string GetResponse(string rawInput)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
