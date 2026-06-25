@@ -10,6 +10,7 @@ namespace CyberAwarenessBotGUI1
         private int currentIdx = 0;
         private int score = 0;
         // Fixed: Explicit type instead of 'var'
+
         private List<Question> questions = QuizManager.GetQuestions();
 
         public QuizWindow()
