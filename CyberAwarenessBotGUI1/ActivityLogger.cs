@@ -7,6 +7,7 @@ namespace CyberAwarenessBotGUI1
     public static class ActivityLogger
     {
         // this method saves the activity to the log file.
+
         private static List<string> logs = new List<string>();
 
         public static void LogAction(string action)
