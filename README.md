@@ -1,6 +1,6 @@
 ﻿# Guardians of your Intergrity - CyberAwarenessBot
 
- (note : part two is the CyberAwarenessBotGUI1 folder.)
+ (note : part three is the CyberAwarenessBotGUI1 folder and the program.cs and UIHelper.cs in the part 1 folder.)
 
 ## Project Description - PART 1
 I developed a C# command-line application that functions as a basic Cybersecurity Awareness Chatbot to provide an interactive cybersecurity awareness to all South Africans. It features specialized modules for Phishing emails, Password Security, and Safe Browsing ( recognising suspicious links ) in a meaningful way to educate users on various forms of cyberattacks that targets individuals, businesses and governmnet institutions.
