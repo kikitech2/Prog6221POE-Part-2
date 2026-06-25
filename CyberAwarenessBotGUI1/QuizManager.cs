@@ -13,7 +13,7 @@ namespace CyberAwarenessBotGUI1
         public int CorrectIndex { get; set; }
         public string Explanation { get; set; }
     }
-
+    // this method saves the activity to the log file.
     public static class QuizManager
     {
         public static List<Question> GetQuestions()
