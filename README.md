@@ -54,6 +54,27 @@ For Part 2 I developed a Graphical User Interface (GUI) that handles the dynamic
 ## ASCII Art Image
 <img width="502" height="378" alt="image" src="https://github.com/user-attachments/assets/27520e27-92e2-4c86-9078-f99295fc012c" />
 
+## Part 3
+
+In my Part 3, i enhanced the exisiting GUI from my part 2 with additional functionalities that allows users to control the GUI. This Cyberawareness GUI-based console application is designed on the c# and WPF platform to educate users on the ditgital safety when interacting with various tasks, quizzes and automated assistance. 
+
+## Setup Instructions
+- This project is running on the Visual Studio 2022 with the .NET Desktop Development workload installed.
+- External pakage - NuGet package for the microsoft SQL.
+- SQL Server Express
+- SQL Server Management Studio for the database management.
+- The name of the database is CyberAwarenessDB and it links to the DatabaseHelper.cs project in Visual studios.
+
+## Features
+- Task Management - The task assistant is the MySQL that stores the users cybersecurity tasks and manage their data. This adds, tracks, and complete security-focused tasks with a persistent SQL backend.
+- The Cybersecurity mini quiz - test users knowledge of cybersecurity that consists of 10 questions that covers topics like phishing, password safety, safe browsing, and social engineering that are formated as a multiple choice based quiz platform where the quiz will generate the score at the end of the quiz.
+- The NLP in the chatbot is designed to recognise various tasks to add reminders or keyword detection to help with.
+- ActivityLogging is automatic recording of user actions providing a transparent audit trail of the session.
+
+  
+
+
+
   
 ## Youtube link
 - YOUTUBE LINK : https://youtu.be/gvz8vB6jWzQ
