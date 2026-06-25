@@ -118,9 +118,18 @@ namespace CyberAwarenessBotGUI1
             txtChatLog.AppendText("You: " + rawInput + "\r\n");
             string inputLower = rawInput.ToLower();
 
+            if (inputLower =="exit" || inputLower =="quit")
+                    {
+                txtChatLog.AppendText("Bot: Goodbye! Staying secure is a continuous journey...");
+                ActivityLogger.LogAction("User exited the application.");
+                System.Windows.Application.Current.Shutdown();
+                return;
+            }
+
             // 1. INTERCEPT: Activity Log Check
             if (inputLower.Contains("show activity log") || inputLower.Contains("what have you done"))
             {
+
                 var recentLogs = ActivityLogger.GetRecentLogs(10);
                 string response = "Here is a summary of recent actions:\n" + string.Join("\n", recentLogs);
                 txtChatLog.AppendText("Bot: " + response + "\r\n");
