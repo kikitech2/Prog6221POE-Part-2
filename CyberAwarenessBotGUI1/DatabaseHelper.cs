@@ -22,7 +22,7 @@ namespace CyberAwarenessBotGUI1
         // Connection string pointing to the local SQL Server Management Studio database instance.
         private static string connectionString = "Server=LabVM2049939\\SQLEXPRESS;Database=CyberAwarenessDB;Trusted_Connection=True;TrustServerCertificate=True;";
 
-        // 1. ADD TASK: Inserts a new security task into the SQL Server Database.
+        // 1. ADD TASK: Inserts a new security task into the SQL Server Database. Implemented the CRUD functionality that creates, reads, updates and deletes data after every change to ensure the database is always synced.
         public static bool AddTask(string title, string description, int? reminderDays)
         {
             try
