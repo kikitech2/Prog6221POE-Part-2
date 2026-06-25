@@ -71,6 +71,20 @@ In my Part 3, i enhanced the exisiting GUI from my part 2 with additional functi
 - The NLP in the chatbot is designed to recognise various tasks to add reminders or keyword detection to help with.
 - ActivityLogging is automatic recording of user actions providing a transparent audit trail of the session.
 
+## Walkthrough
+- Launch the application
+- System message appears in the chatlog which confirms that the UI is activated.
+- Exisiting data will appear which shows that the application is connected to the SQL database.
+- Audio greeting
+- Enter user name
+- Task Assistant - The user can insert the task title and description on the right side of the GUI as well as moving the 'Day' slider and click on Add task.
+- The new task will appear in the DataGrid immediately. Stat labels like total,pending and completed will automatically be updated when the user decides to interact with the controls.
+- User can click on 'Complete' when they have uploaded a new task.
+- This is all controlled by the activity logger whenever a user makes a query. And the list of recent actions will appear in the chat log.
+- The user can also which sides to ask the chatbot questions on the left side of the GUI about 'phishing' or 'passwords'
+- The user can also go type 'quiz' into the chatbox where the user will enter a mini game on various cybersecurity questions.
+- The user can type exit into the chatbox whenever they want to leave.
+
   
 
 
