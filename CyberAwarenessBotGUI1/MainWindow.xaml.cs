@@ -20,6 +20,7 @@ namespace CyberAwarenessBotGUI1
 
             RefreshTaskGrid();
         }
+        // this method saves the activity to the log file.
 
         private void RefreshTaskGrid()
         {
