@@ -59,7 +59,7 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Orientation="Vertical">
-                    <TextBlock Text="🛡️ DATABASE TASK TRACKER" FontSize="18" FontWeight="Bold" Foreground="#00FFFF" Margin="0,0,0,2" FontFamily="Consolas"/>
+                    <TextBlock Text="DATABASE TASK TRACKER" FontSize="18" FontWeight="Bold" Foreground="#00FFFF" Margin="0,0,0,2" FontFamily="Consolas"/>
                     <TextBlock Text="Live SQL Server Monitoring Dashboard" FontSize="12" Foreground="#888888" Margin="0,0,0,10" FontFamily="Consolas"/>
 
                     <UniformGrid Columns="3" Margin="0,0,0,12">
@@ -87,7 +87,7 @@
 
                     <Border Background="#252526" BorderBrush="#333333" BorderThickness="1" CornerRadius="4" Padding="12" Margin="0,0,0,15">
                         <StackPanel>
-                            <TextBlock Text="➕ CREATE NEW SECURITY TRACKING TASK" Foreground="#00FFFF" FontWeight="Bold" FontSize="12" FontFamily="Consolas" Margin="0,0,0,10"/>
+                            <TextBlock Text="CREATE NEW SECURITY TRACKING TASK" Foreground="#00FFFF" FontWeight="Bold" FontSize="12" FontFamily="Consolas" Margin="0,0,0,10"/>
 
                             <TextBlock Text="Security Task Title:" Foreground="#FFFFFF" FontSize="11" FontFamily="Consolas" Margin="0,0,0,3"/>
                             <TextBox x:Name="txtFormTitle" Background="#1E1E1E" Foreground="#FFFFFF" BorderBrush="#555555" BorderThickness="1" Padding="5" FontFamily="Consolas" FontSize="12" Margin="0,0,0,8"/>

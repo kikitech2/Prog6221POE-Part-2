@@ -1,6 +1,6 @@
 ﻿# Guardians of your Intergrity - CyberAwarenessBot
 
- (note : part two is the CyberAwarenessBotGUI1 folder.)
+ (note : part three is the CyberAwarenessBotGUI1 folder and the program.cs and UIHelper.cs in the part 1 folder.)
 
 ## Project Description - PART 1
 I developed a C# command-line application that functions as a basic Cybersecurity Awareness Chatbot to provide an interactive cybersecurity awareness to all South Africans. It features specialized modules for Phishing emails, Password Security, and Safe Browsing ( recognising suspicious links ) in a meaningful way to educate users on various forms of cyberattacks that targets individuals, businesses and governmnet institutions.
@@ -53,6 +53,41 @@ For Part 2 I developed a Graphical User Interface (GUI) that handles the dynamic
 
 ## ASCII Art Image
 <img width="502" height="378" alt="image" src="https://github.com/user-attachments/assets/27520e27-92e2-4c86-9078-f99295fc012c" />
+
+## Part 3
+
+In my Part 3, i enhanced the exisiting GUI from my part 2 with additional functionalities that allows users to control the GUI. This Cyberawareness GUI-based console application is designed on the c# and WPF platform to educate users on the ditgital safety when interacting with various tasks, quizzes and automated assistance. 
+
+## Setup Instructions
+- This project is running on the Visual Studio 2022 with the .NET Desktop Development workload installed.
+- External pakage - NuGet package for the microsoft SQL.
+- SQL Server Express
+- SQL Server Management Studio for the database management.
+- The name of the database is CyberAwarenessDB and it links to the DatabaseHelper.cs project in Visual studios.
+
+## Features
+- Task Management - The task assistant is the MySQL that stores the users cybersecurity tasks and manage their data. This adds, tracks, and complete security-focused tasks with a persistent SQL backend.
+- The Cybersecurity mini quiz - test users knowledge of cybersecurity that consists of 10 questions that covers topics like phishing, password safety, safe browsing, and social engineering that are formated as a multiple choice based quiz platform where the quiz will generate the score at the end of the quiz.
+- The NLP in the chatbot is designed to recognise various tasks to add reminders or keyword detection to help with.
+- ActivityLogging is automatic recording of user actions providing a transparent audit trail of the session.
+
+## Walkthrough
+- Launch the application
+- System message appears in the chatlog which confirms that the UI is activated.
+- Exisiting data will appear which shows that the application is connected to the SQL database.
+- Audio greeting
+- Enter user name
+- Task Assistant - The user can insert the task title and description on the right side of the GUI as well as moving the 'Day' slider and click on Add task.
+- The new task will appear in the DataGrid immediately. Stat labels like total,pending and completed will automatically be updated when the user decides to interact with the controls.
+- User can click on 'Complete' when they have uploaded a new task.
+- This is all controlled by the activity logger whenever a user makes a query. And the list of recent actions will appear in the chat log.
+- The user can also which sides to ask the chatbot questions on the left side of the GUI about 'phishing' or 'passwords'
+- The user can also go type 'quiz' into the chatbox where the user will enter a mini game on various cybersecurity questions.
+- The user can type exit into the chatbox whenever they want to leave.
+
+  
+
+
 
   
 ## Youtube link

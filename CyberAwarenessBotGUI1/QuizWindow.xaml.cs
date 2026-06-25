@@ -9,7 +9,7 @@ namespace CyberAwarenessBotGUI1
     {
         private int currentIdx = 0;
         private int score = 0;
-        // Fixed: Explicit type instead of 'var'
+       
 
         private List<Question> questions = QuizManager.GetQuestions();
 
@@ -30,7 +30,7 @@ namespace CyberAwarenessBotGUI1
             foreach (var option in q.Options)
             {
                 Button btn = new Button { Content = option, Margin = new Thickness(5) };
-                // Use a local variable to capture the index correctly
+                // Used a local variable to capture the index correctly.
                 string selectedOption = option;
                 btn.Click += (s, e) => CheckAnswer(q.Options.IndexOf(selectedOption));
                 stackAnswers.Children.Add(btn);

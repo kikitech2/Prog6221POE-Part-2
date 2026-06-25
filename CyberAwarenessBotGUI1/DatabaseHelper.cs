@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient; // Using the updated package to clear the CS0618 obsolete warnings
+﻿using Microsoft.Data.SqlClient; 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace CyberAwarenessBotGUI1
 {
     public static class DatabaseHelper
     {
-        // Moving the CyberTask class inside DatabaseHelper ensures Visual Studio sees it perfectly
+        // Moving the CyberTask class inside DatabaseHelper ensures Visual Studio sees it perfectly.
         public class CyberTask
         {
             public int Id { get; set; }
@@ -19,10 +19,10 @@ namespace CyberAwarenessBotGUI1
             public bool IsCompleted { get; set; }
         }
 
-        // Connection string pointing to your local SQL Server Management Studio database instance
+        // Connection string pointing to the local SQL Server Management Studio database instance.
         private static string connectionString = "Server=LabVM2049939\\SQLEXPRESS;Database=CyberAwarenessDB;Trusted_Connection=True;TrustServerCertificate=True;";
 
-        // 1. ADD TASK: Inserts a new security task into the SQL Server Database
+        // 1. ADD TASK: Inserts a new security task into the SQL Server Database. Implemented the CRUD functionality that creates, reads, updates and deletes data after every change to ensure the database is always synced.
         public static bool AddTask(string title, string description, int? reminderDays)
         {
             try
@@ -44,13 +44,13 @@ namespace CyberAwarenessBotGUI1
             }
             catch (Exception ex)
             {
-                // Using the variable clears the CS0168 warning completely!
+                
                 System.Diagnostics.Debug.WriteLine("Error adding task: " + ex.Message);
                 return false;
             }
         }
 
-        // 2. VIEW ALL TASKS: Retrieves all existing records from the database into a list
+        // 2. VIEW ALL TASKS: Retrieves all existing records from the database into a list.
         public static List<CyberTask> GetAllTasks()
         {
             List<CyberTask> taskList = new List<CyberTask>();
@@ -87,7 +87,7 @@ namespace CyberAwarenessBotGUI1
             return taskList;
         }
 
-        // 3. MARK TASK COMPLETED: Updates the completion flag inside the table row
+        // 3. MARK TASK COMPLETED: Updates the completion inside the table row.
         public static bool CompleteTask(int taskId)
         {
             try
@@ -111,7 +111,7 @@ namespace CyberAwarenessBotGUI1
             }
         }
 
-        // 4. DELETE TASK: Completely removes the specified task row from storage
+        // 4. DELETE TASK: Completely removes the specified task row from storage.
         public static bool DeleteTask(int taskId)
         {
             try

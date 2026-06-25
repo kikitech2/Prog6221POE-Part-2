@@ -134,7 +134,7 @@ namespace CyberAwarenessBotGUI1
                 string response = "Here is a summary of recent actions:\n" + string.Join("\n", recentLogs);
                 txtChatLog.AppendText("Bot: " + response + "\r\n");
             }
-            // 2. EXISTING ENGINE: Proceed to your UIHelper logic
+            // 2. EXISTING ENGINE: from the UIHelper logic
             else
             {
                 string responseBot = "";
