@@ -85,7 +85,8 @@ In my Part 3, i enhanced the exisiting GUI from my part 2 with additional functi
 - The user can also go type 'quiz' into the chatbox where the user will enter a mini game on various cybersecurity questions.
 - The user can type exit into the chatbox whenever they want to leave.
 
-  
+  <img width="1475" height="916" alt="image" src="https://github.com/user-attachments/assets/3550999f-4818-4cc3-bc03-74fa07e58d58" />
+
 
 
 
