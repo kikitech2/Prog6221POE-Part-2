@@ -94,6 +94,7 @@ In my Part 3, I enhanced the exisiting GUI from my part 2 with additional functi
 ## Youtube link
 - YOUTUBE LINK : https://youtu.be/gvz8vB6jWzQ
 - YOUTUBE LINK PART 2: https://youtu.be/emr358NgIAg
+- YOUTUBE LINK PART 3: https://youtu.be/2ZUMVBrV5Bs
 ## References
 Troelsen, A. and Japikse, P. (2021). Pro C# 9 with .NET 5: Foundational Principles and Practices in Programming. 10th edn. New York: Apress.
 .
