@@ -115,7 +115,7 @@ namespace CyberAwarenessBotGUI1
             txtChatLog.AppendText("You: " + rawInput + "\r\n");
             string inputLower = rawInput.ToLower();
 
-            // 1. EXIT/QUIT COMMAND (Highest Priority)
+            // 1. EXIT/QUIT COMMAND 
             if (inputLower == "exit" || inputLower == "quit")
             {
                 txtChatLog.AppendText("Bot: Goodbye! Staying secure is a continuous journey...");
