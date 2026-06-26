@@ -56,7 +56,7 @@ For Part 2 I developed a Graphical User Interface (GUI) that handles the dynamic
 
 ## Part 3
 
-In my Part 3, i enhanced the exisiting GUI from my part 2 with additional functionalities that allows users to control the GUI. This Cyberawareness GUI-based console application is designed on the c# and WPF platform to educate users on the ditgital safety when interacting with various tasks, quizzes and automated assistance. 
+In my Part 3, I enhanced the exisiting GUI from my part 2 with additional functionalities that allows users to control the GUI. This Cyberawareness GUI-based console application is designed on the C# and WPF platform to educate users on the ditgital safety when interacting with various tasks, quizzes and automated assistance. 
 
 ## Setup Instructions
 - This project is running on the Visual Studio 2022 with the .NET Desktop Development workload installed.
