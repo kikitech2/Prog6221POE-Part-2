@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -8,6 +9,9 @@ namespace CyberAwarenessBotGUI1
 {
     public partial class MainWindow : Window
     {
+        // State flag to differentiate between general chat and quiz interactions
+        private bool isQuizActive = false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -20,7 +24,6 @@ namespace CyberAwarenessBotGUI1
 
             RefreshTaskGrid();
         }
-        // this method saves the activity to the log file.
 
         private void RefreshTaskGrid()
         {
@@ -31,15 +34,10 @@ namespace CyberAwarenessBotGUI1
                 dgTasks.ItemsSource = activeTasks;
 
                 int totalTasksCount = activeTasks.Count;
-                int completedTasksCount = 0;
-                int pendingTasksCount = 0;
+                int completedTasksCount = activeTasks.Count(t => t.IsCompleted);
+                int pendingTasksCount = activeTasks.Count(t => !t.IsCompleted);
 
-                foreach (var task in activeTasks)
-                {
-                    if (task.IsCompleted) completedTasksCount++;
-                    else pendingTasksCount++;
-                }
-
+                // Ensure these names match your XAML file exactly
                 lblTotalCount.Text = totalTasksCount.ToString();
                 lblPendingCount.Text = pendingTasksCount.ToString();
                 lblCompletedCount.Text = completedTasksCount.ToString();
@@ -64,7 +62,6 @@ namespace CyberAwarenessBotGUI1
                 int selectedDays = Convert.ToInt32(sliderDays.Value);
                 DatabaseHelper.AddTask(title, desc, selectedDays);
 
-                // Track this action
                 ActivityLogger.LogAction($"Task Added: '{title}'");
 
                 txtChatLog.AppendText($"[System]: Successfully added task: {title}\r\n");
@@ -118,23 +115,38 @@ namespace CyberAwarenessBotGUI1
             txtChatLog.AppendText("You: " + rawInput + "\r\n");
             string inputLower = rawInput.ToLower();
 
-            if (inputLower =="exit" || inputLower =="quit")
-                    {
+            // 1. EXIT/QUIT COMMAND (Highest Priority)
+            if (inputLower == "exit" || inputLower == "quit")
+            {
                 txtChatLog.AppendText("Bot: Goodbye! Staying secure is a continuous journey...");
                 ActivityLogger.LogAction("User exited the application.");
                 System.Windows.Application.Current.Shutdown();
                 return;
             }
 
-            // 1. INTERCEPT: Activity Log Check
-            if (inputLower.Contains("show activity log") || inputLower.Contains("what have you done"))
+            // 2. QUIZ STATE LOGIC
+            // By checking this flag, we ensure that inputs like "Mohale" 
+            // are treated as chat, not as quiz answers.
+            if (isQuizActive)
             {
-
+                // ADD QUIZ EVALUATION HERE
+                txtChatLog.AppendText("Bot: Processing quiz answer...\r\n");
+                // If quiz is finished: isQuizActive = false;
+            }
+            // 3. START QUIZ COMMAND
+            else if (inputLower == "quiz")
+            {
+                isQuizActive = true;
+                txtChatLog.AppendText("Bot: Quiz mode activated. Please answer the questions.\r\n");
+            }
+            // 4. ACTIVITY LOG CHECK
+            else if (inputLower.Contains("show activity log") || inputLower.Contains("what have you done"))
+            {
                 var recentLogs = ActivityLogger.GetRecentLogs(10);
                 string response = "Here is a summary of recent actions:\n" + string.Join("\n", recentLogs);
                 txtChatLog.AppendText("Bot: " + response + "\r\n");
             }
-            // 2. EXISTING ENGINE: from the UIHelper logic
+            // 5. GENERAL CHAT (Greetings/Name input)
             else
             {
                 string responseBot = "";
